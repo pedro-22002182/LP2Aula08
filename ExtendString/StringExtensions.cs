@@ -15,12 +15,7 @@ namespace ExtendString
         
             foreach(char c in s)
             {
-                double n = rd.NextDouble();
-
-                if(n < 0.5)
-                    novaString += c.ToString().ToUpper();
-                else
-                    novaString += c.ToString().ToLower();
+                novaString += rd.NextDouble() < 0.5 ? char.ToLower(c) : char.ToUpper(c);
             }
 
             return novaString;
