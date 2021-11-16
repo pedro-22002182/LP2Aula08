@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text;
 
 namespace ExtendString
 {
@@ -9,16 +10,15 @@ namespace ExtendString
     {
         public static string ToRandomClase(this string s)
         {
-            string novaString = "";
-
             Random rd = new Random();
+            StringBuilder sb = new StringBuilder();
         
             foreach(char c in s)
             {
-                novaString += rd.NextDouble() < 0.5 ? char.ToLower(c) : char.ToUpper(c);
+                sb.Append(rd.NextDouble() < 0.5 ? char.ToLower(c) : char.ToUpper(c));
             }
 
-            return novaString;
+            return sb.ToString();
         }
     }
 }
