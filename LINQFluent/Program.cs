@@ -21,7 +21,7 @@ namespace LINQFluent
             Console.WriteLine(linhaMais);
 
             IEnumerable<string> ComecaY = texto.Where( linha => linha.Contains("Y") )
-                                                .Select( linha => linha.Split()?[0].ToUpper());
+                                                .Select( linha => linha.Trim().Split()?[0].ToUpper());
             priprintarnt(ComecaY);
         }
 
